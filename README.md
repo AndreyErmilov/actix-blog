@@ -1,5 +1,7 @@
 # Actix-Blog
 
+*Work in progress*
+
 This project is part of an upcoming series of articles on Rust Development.
 
 ## Under the hood
