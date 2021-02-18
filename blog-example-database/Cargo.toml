@@ -1,0 +1,18 @@
+[package]
+name = "blog-example-database"
+version = "0.1.0"
+authors = ["Andrey Ermilov <andrerm@ya.ru>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+diesel = { version = "1", features = ["postgres", "r2d2", "serde_json", "chrono"] }
+r2d2 = "0.8"
+thiserror = "1"
+tracing = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+blog-example-models = { path = "../blog-example-models" }

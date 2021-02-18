@@ -1,0 +1,20 @@
+use crate::DatabaseError;
+use actix::prelude::*;
+
+#[derive(Default, Message, Debug)]
+#[rtype(result = "Result<blog_example_models::Article, DatabaseError>")]
+pub struct QueryArticle {
+    pub article_id: i32,
+}
+
+#[derive(Default, Message, Debug)]
+#[rtype(result = "Result<Vec<blog_example_models::Article>, DatabaseError>")]
+pub struct QueryArticles {
+    pub user_id: i32,
+}
+
+#[derive(Default, Message, Debug)]
+#[rtype(result = "Result<(), DatabaseError>")]
+pub struct CreateArticle {
+    pub user_id: i32,
+}

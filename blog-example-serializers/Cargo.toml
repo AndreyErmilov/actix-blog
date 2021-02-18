@@ -1,0 +1,12 @@
+[package]
+name = "blog-example-serializers"
+version = "0.1.0"
+authors = ["Andrey Ermilov <andrerm@ya.ru>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+blog-example-models = { path = "../blog-example-models" }
+serde = { version = "1", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
